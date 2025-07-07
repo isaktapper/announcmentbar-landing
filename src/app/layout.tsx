@@ -22,10 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
   <head>
-    <script
-      src="https://announcmentbar-9o8swpr2y-isaktappers-projects.vercel.app/embed/kkmeyz.js"
-      defer
-    ></script>
+  <script src="https://announcmentbar.vercel.app/embed/kkmeyz.js" defer></script>
   </head>
       <body
         className={`${inter.variable} font-sans antialiased`}

@@ -48,7 +48,7 @@ export default function Hero() {
               href="#pricing"
               className="btn-primary text-lg px-8 py-4 inline-flex items-center group"
             >
-              Get started – it's free
+              Get started – it&apos;s free
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <button className="btn-secondary text-lg px-8 py-4">

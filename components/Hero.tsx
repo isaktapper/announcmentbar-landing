@@ -1,118 +1,113 @@
-import { ArrowRight, Sparkles, Zap, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden yellow-bg section-padding">
-      {/* Playful background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="doodle top-20 left-10 w-24 h-24 text-gray-300 float-animation">
-          <svg viewBox="0 0 100 100" className="w-full h-full">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="15,8" />
-          </svg>
-        </div>
-        <div className="doodle top-32 right-16 w-20 h-20 text-purple-200 sparkle">
-          <Sparkles className="w-full h-full" />
-        </div>
-        <div className="doodle bottom-40 left-1/4 w-28 h-28 text-blue-200 float-animation">
-          <svg viewBox="0 0 100 100" className="w-full h-full">
-            <path d="M20,50 Q30,20 50,30 Q70,40 80,20 Q90,40 80,60 Q70,50 50,60 Q30,70 20,50" 
-                  fill="none" stroke="currentColor" strokeWidth="3" />
-          </svg>
-        </div>
-        <div className="doodle top-1/2 right-1/3 w-16 h-16 text-yellow-400 sparkle">
-          <Star className="w-full h-full" />
-        </div>
-      </div>
-
-      <div className="relative container-xl">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Playful badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm text-gray-900 rounded-full text-sm font-bold mb-8 border-3 border-yellow-300 shadow-lg">
-            <span className="mr-2">✨</span>
-            No devs harmed in the making of this bar
-            <Zap className="w-4 h-4 ml-2 text-yellow-600" />
-          </div>
-
-          {/* Main headline */}
-          <h1 className="heading-xl text-gray-900 mb-8">
-            Announce anything in{' '}
-            <span className="gradient-text">60 seconds</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="body-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            Launch a banner in seconds. Maintenance, promos, updates — made easy.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <a
-              href="#pricing"
-              className="btn-yellow text-xl px-10 py-5 inline-flex items-center group font-black uppercase tracking-wide"
-            >
-              Get Started Free
-              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </a>
-            <button className="btn-secondary text-xl px-10 py-5 font-black uppercase tracking-wide">
-              See Demo
-            </button>
-          </div>
-
-          {/* Social proof */}
-          <div className="text-gray-600 text-lg font-medium">
-            <p>✨ Setup time: 60 seconds • 💳 No credit card • 🚀 Go live instantly</p>
-          </div>
-        </div>
-
-        {/* Hero visual - playful announcement bar preview */}
-        <div className="mt-20 relative max-w-4xl mx-auto">
-          <div className="playful-card bg-white p-10 relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-4 right-4 w-8 h-8 text-yellow-400 opacity-30">
-              <Sparkles className="w-full h-full sparkle" />
+    <section className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[70vh]">
+          {/* Left side - Content */}
+          <div className="lg:pr-8">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-[#FFFFC5] text-[#1a1a1a] rounded-full text-sm font-medium mb-8">
+              ✨ Free to start
             </div>
-            
-            <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white p-6 rounded-2xl text-center relative overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-              <div className="relative z-10">
-                <p className="font-bold text-lg flex items-center justify-center">
-                  <span className="mr-2">🎉</span>
-                  BLACK FRIDAY: 50% OFF EVERYTHING! 
-                  <span className="ml-2">🔥</span>
-                </p>
-                <p className="text-sm mt-2 opacity-90">Use code FRIDAY50 at checkout →</p>
+
+            {/* Headline */}
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Announce your updates{' '}
+              <span className="relative">
+                in seconds
+                <svg 
+                  className="absolute -bottom-2 left-0 w-full h-3" 
+                  viewBox="0 0 200 12" 
+                  fill="none"
+                >
+                  <path 
+                    d="M2 10C60 4 140 4 198 10" 
+                    stroke="#FFFFC5" 
+                    strokeWidth="4" 
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed max-w-lg">
+              Create banners for product launches, downtime, or campaigns — fast and simple.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#pricing"
+                className="btn-primary inline-flex items-center group text-lg"
+              >
+                Try it free
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <button className="btn-secondary text-lg">
+                See examples
+              </button>
+            </div>
+
+            {/* Social proof */}
+            <div className="mt-12 text-sm text-gray-500">
+              <p>No credit card required • Setup in 30 seconds</p>
+            </div>
+          </div>
+
+          {/* Right side - Clean mockup */}
+          <div className="lg:pl-8">
+            <div className="relative">
+              {/* Browser mockup */}
+              <div className="bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden">
+                {/* Browser header */}
+                <div className="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  </div>
+                  <div className="flex-1 mx-4">
+                    <div className="bg-white rounded-md px-3 py-1 text-xs text-gray-500 border">
+                      yourwebsite.com
+                    </div>
+                  </div>
+                </div>
+
+                {/* Announcement bar */}
+                <div className="bg-[#FFFFC5] text-[#1a1a1a] p-4 text-center relative">
+                  <p className="font-medium">
+                    🎉 New product launch! Get 30% off with code <span className="font-bold">LAUNCH30</span>
+                  </p>
+                  <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#1a1a1a] hover:bg-black hover:bg-opacity-10 rounded p-1">
+                    ×
+                  </button>
+                </div>
+
+                {/* Website content simulation */}
+                <div className="p-8 space-y-6">
+                  <div className="h-8 bg-gray-100 rounded w-3/4"></div>
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-100 rounded"></div>
+                    <div className="h-4 bg-gray-100 rounded w-5/6"></div>
+                    <div className="h-4 bg-gray-100 rounded w-4/6"></div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="h-10 bg-gray-100 rounded w-24"></div>
+                    <div className="h-10 bg-gray-100 rounded w-24"></div>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <p className="text-gray-500 font-medium">
-                ↑ This took 60 seconds to create and deploy
-              </p>
-              <div className="flex justify-center mt-4 space-x-2">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Fun stats */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="playful-card stagger-1">
-            <div className="text-4xl font-black text-gray-900 mb-2">60s</div>
-            <div className="text-gray-600 font-medium">Average setup time</div>
-          </div>
-          <div className="playful-card stagger-2">
-            <div className="text-4xl font-black text-gray-900 mb-2">0</div>
-            <div className="text-gray-600 font-medium">Lines of code needed</div>
-          </div>
-          <div className="playful-card stagger-3">
-            <div className="text-4xl font-black text-gray-900 mb-2">∞</div>
-            <div className="text-gray-600 font-medium">Customization options</div>
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#FFFFC5] rounded-full opacity-60"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-[#FFFFC5] rounded-full opacity-40"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-      );
-  } 
+  );
+} 

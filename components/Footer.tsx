@@ -1,4 +1,5 @@
 import { Github, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,9 +8,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo/Brand */}
           <div className="flex items-center space-x-2">
-            <h2 className="text-lg font-semibold text-gray-900 wiggle-on-hover">
-              <span className="yellow-gradient-text">Yello</span>.bar
-            </h2>
+            <div className="wiggle-on-hover">
+              <Image
+                src="/logo.svg"
+                alt="Yello.bar"
+                width={100}
+                height={26}
+                className="h-6 w-auto"
+              />
+            </div>
             <span className="text-gray-400">•</span>
             <span className="text-sm text-gray-600">Banners that get noticed</span>
           </div>

@@ -2,6 +2,7 @@
 
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +13,16 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-gray-900 wiggle-on-hover cursor-pointer">
-              <span className="yellow-gradient-text">Yello</span>.bar
-            </h1>
+            <div className="wiggle-on-hover cursor-pointer">
+              <Image
+                src="/logo.svg"
+                alt="Yello.bar"
+                width={120}
+                height={32}
+                className="h-8 w-auto"
+                priority
+              />
+            </div>
           </div>
 
           {/* Desktop Navigation */}

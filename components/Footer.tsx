@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">Banners that get noticed</span>
+            <span className="text-sm text-gray-600">Bars that get noticed</span>
           </div>
 
           {/* Navigation Links */}
@@ -71,7 +71,7 @@ export default function Footer() {
           {/* Fun tagline */}
           <div className="flex items-center space-x-2 text-sm text-gray-500">
             <span>✨</span>
-            <span>Making the web more colorful, one banner at a time</span>
+            <span>Making the web more colorful, one bar at a time</span>
           </div>
         </div>
       </div>

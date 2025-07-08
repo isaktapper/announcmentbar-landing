@@ -14,7 +14,7 @@ const steps = [
         </div>
         <div className="text-center">
           <Edit className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-          <p className="text-sm text-gray-500 font-medium">✍️ Type your announcement...</p>
+          <p className="text-sm text-gray-500 font-medium">✍️ Type your bar...</p>
           <div className="mt-2 w-32 h-2 bg-yellow-100 rounded"></div>
         </div>
       </div>
@@ -30,7 +30,7 @@ const steps = [
       <div className="yellow-accent rounded-2xl p-6 h-40 flex items-center justify-center text-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 to-yellow-300 opacity-60"></div>
         <div className="relative z-10 text-center">
-          <p className="font-bold text-lg">🎨 Your styled banner!</p>
+          <p className="font-bold text-lg">🎨 Your styled bar!</p>
           <div className="flex justify-center mt-3 space-x-2">
             <div className="w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
             <div className="w-4 h-4 bg-yellow-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
@@ -82,7 +82,7 @@ export default function HowItWorks() {
             How it works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Three simple steps to get your banner live. No complexity, no headaches, just results.
+            Three simple steps to get your bar live. No complexity, no headaches, just results.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export default function HowItWorks() {
           <div className="inline-flex items-center px-6 py-3 bg-yellow-50 rounded-2xl mb-6">
             <span className="text-2xl mr-2">⚡</span>
             <span className="text-gray-700">
-              <span className="font-bold">Fun fact:</span> Most people finish their first banner during coffee break
+              <span className="font-bold">Fun fact:</span> Most people finish their first bar during coffee break
             </span>
           </div>
           <div>

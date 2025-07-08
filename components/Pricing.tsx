@@ -7,7 +7,7 @@ const plans = [
     priceSubtext: 'forever',
     description: 'Get started with the basics',
     features: [
-      '1 active banner',
+      '1 active bar',
       'Templates',
       'Standard icons',
     ],
@@ -21,7 +21,7 @@ const plans = [
     priceSubtext: 'one-time',
     description: 'Everything you need, forever',
     features: [
-      'Unlimited banners',
+      'Unlimited bars',
       'Templates',
       'Premium icons',
       'Custom fonts',

@@ -4,7 +4,7 @@ const features = [
   {
     icon: Layers,
     title: 'Templates for every use case',
-    description: 'Sales, announcements, maintenance, events – all covered with clean, effective designs.',
+    description: 'Sales, bars, maintenance, events – all covered with clean, effective designs.',
   },
   {
     icon: Code,
@@ -19,7 +19,7 @@ const features = [
   {
     icon: Zap,
     title: 'No account needed (optional)',
-    description: 'Start creating immediately. Sign up later if you want to save and manage multiple banners.',
+    description: 'Start creating immediately. Sign up later if you want to save and manage multiple bars.',
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Features() {
           <div className="inline-flex items-center px-6 py-3 bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
             <span className="text-gray-600">💡</span>
             <span className="ml-2 text-gray-700">
-              <span className="font-medium">Pro tip:</span> Most banners go live in under 2 minutes
+              <span className="font-medium">Pro tip:</span> Most bars go live in under 2 minutes
             </span>
           </div>
           <div>

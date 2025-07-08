@@ -52,7 +52,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-              Yello makes it <span className="underline-yellow font-medium">stupidly easy</span> to create and embed banners that actually get noticed.
+              Yello makes it <span className="underline-yellow font-medium">stupidly easy</span> to create and embed bars that actually get noticed.
             </p>
 
             {/* CTA Button */}
@@ -72,7 +72,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column - Banner Preview */}
+          {/* Right column - Bar Preview */}
           <div className="relative">
             {/* Floating mockup container */}
             <div className="bg-gray-50 rounded-extra-friendly p-8 shadow-xl border border-gray-100 card-hover">
@@ -92,7 +92,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Banner preview */}
+                {/* Bar preview */}
                 <div className="relative">
                   <div className="yellow-accent p-4 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-yellow-300 opacity-50"></div>
@@ -115,7 +115,7 @@ export default function Hero() {
 
               {/* Caption */}
               <div className="mt-4 text-center text-sm text-gray-500">
-                ↑ Your banner, live on your site
+                ↑ Your bar, live on your site
               </div>
             </div>
 

@@ -1,82 +1,118 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Star } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-32">
-      {/* Background decorations */}
+    <section className="relative overflow-hidden yellow-bg section-padding">
+      {/* Playful background decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-20 h-20 text-blue-200 opacity-20">
+        <div className="doodle top-20 left-10 w-24 h-24 text-gray-300 float-animation">
           <svg viewBox="0 0 100 100" className="w-full h-full">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="10,5" />
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="15,8" />
           </svg>
         </div>
-        <div className="absolute top-40 right-20 w-16 h-16 text-purple-200 opacity-30">
+        <div className="doodle top-32 right-16 w-20 h-20 text-purple-200 sparkle">
           <Sparkles className="w-full h-full" />
         </div>
-        <div className="absolute bottom-32 left-1/4 w-24 h-24 text-blue-100 opacity-25">
+        <div className="doodle bottom-40 left-1/4 w-28 h-28 text-blue-200 float-animation">
           <svg viewBox="0 0 100 100" className="w-full h-full">
-            <path d="M20,50 Q50,20 80,50 Q50,80 20,50" fill="none" stroke="currentColor" strokeWidth="2" />
+            <path d="M20,50 Q30,20 50,30 Q70,40 80,20 Q90,40 80,60 Q70,50 50,60 Q30,70 20,50" 
+                  fill="none" stroke="currentColor" strokeWidth="3" />
           </svg>
+        </div>
+        <div className="doodle top-1/2 right-1/3 w-16 h-16 text-yellow-400 sparkle">
+          <Star className="w-full h-full" />
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Free to get started
+      <div className="relative container-xl">
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Playful badge */}
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm text-gray-900 rounded-full text-sm font-bold mb-8 border-3 border-yellow-300 shadow-lg">
+            <span className="mr-2">✨</span>
+            No devs harmed in the making of this bar
+            <Zap className="w-4 h-4 ml-2 text-yellow-600" />
           </div>
 
-          {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Add announcement bars to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              your site
-            </span>{' '}
-            in seconds
+          {/* Main headline */}
+          <h1 className="heading-xl text-gray-900 mb-8">
+            Announce anything in{' '}
+            <span className="gradient-text">60 seconds</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Customizable. Embeddable. No coding needed.
+          {/* Subheadline */}
+          <p className="body-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Launch a banner in seconds. Maintenance, promos, updates — made easy.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <a
               href="#pricing"
-              className="btn-primary text-lg px-8 py-4 inline-flex items-center group"
+              className="btn-yellow text-xl px-10 py-5 inline-flex items-center group font-black uppercase tracking-wide"
             >
-              Get started – it&apos;s free
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Get Started Free
+              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </a>
-            <button className="btn-secondary text-lg px-8 py-4">
-              See demo
+            <button className="btn-secondary text-xl px-10 py-5 font-black uppercase tracking-wide">
+              See Demo
             </button>
           </div>
 
-          {/* Social proof or additional info */}
-          <div className="mt-16 text-sm text-gray-500">
-            <p>No credit card required • Set up in under 60 seconds</p>
+          {/* Social proof */}
+          <div className="text-gray-600 text-lg font-medium">
+            <p>✨ Setup time: 60 seconds • 💳 No credit card • 🚀 Go live instantly</p>
           </div>
         </div>
 
-        {/* Hero visual placeholder */}
-        <div className="mt-20 relative">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto border border-gray-100">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-lg text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+        {/* Hero visual - playful announcement bar preview */}
+        <div className="mt-20 relative max-w-4xl mx-auto">
+          <div className="playful-card bg-white p-10 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-4 right-4 w-8 h-8 text-yellow-400 opacity-30">
+              <Sparkles className="w-full h-full sparkle" />
+            </div>
+            
+            <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white p-6 rounded-2xl text-center relative overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
               <div className="relative z-10">
-                <p className="font-medium">🎉 New product launch! Get 30% off everything with code LAUNCH30</p>
+                <p className="font-bold text-lg flex items-center justify-center">
+                  <span className="mr-2">🎉</span>
+                  BLACK FRIDAY: 50% OFF EVERYTHING! 
+                  <span className="ml-2">🔥</span>
+                </p>
+                <p className="text-sm mt-2 opacity-90">Use code FRIDAY50 at checkout →</p>
               </div>
             </div>
-            <div className="mt-4 text-center text-gray-500 text-sm">
-              ↑ This is what your announcement bar could look like
+            
+            <div className="mt-6 text-center">
+              <p className="text-gray-500 font-medium">
+                ↑ This took 60 seconds to create and deploy
+              </p>
+              <div className="flex justify-center mt-4 space-x-2">
+                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Fun stats */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="playful-card stagger-1">
+            <div className="text-4xl font-black text-gray-900 mb-2">60s</div>
+            <div className="text-gray-600 font-medium">Average setup time</div>
+          </div>
+          <div className="playful-card stagger-2">
+            <div className="text-4xl font-black text-gray-900 mb-2">0</div>
+            <div className="text-gray-600 font-medium">Lines of code needed</div>
+          </div>
+          <div className="playful-card stagger-3">
+            <div className="text-4xl font-black text-gray-900 mb-2">∞</div>
+            <div className="text-gray-600 font-medium">Customization options</div>
           </div>
         </div>
       </div>
     </section>
-  );
-} 
+      );
+  } 

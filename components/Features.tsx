@@ -1,42 +1,59 @@
-import { Code, Palette, Copy, Zap } from 'lucide-react';
+import { Code, Palette, Copy, Zap, Sparkles } from 'lucide-react';
+
+type AccentColor = 'yellow' | 'blue' | 'purple' | 'pink';
 
 const features = [
   {
     icon: Zap,
-    title: 'Easy to embed',
-    description: 'Just copy and paste one line of code. No complex integration required.',
+    title: 'Lightning Setup',
+    description: 'Copy, paste, done! No webpack configs or build steps. Just pure announcement magic.',
+    accent: 'yellow' as AccentColor,
   },
   {
     icon: Code,
-    title: 'Pre-built templates',
-    description: 'Choose from beautiful, conversion-optimized templates that work out of the box.',
+    title: 'Pre-made Glory',
+    description: 'Gorgeous templates that convert. No design skills needed — we&apos;ve got the pixels covered.',
+    accent: 'blue' as AccentColor,
   },
   {
     icon: Palette,
-    title: 'Custom colors & gradients',
-    description: 'Match your brand perfectly with unlimited color and gradient options.',
+    title: 'Brand Perfect',
+    description: 'Colors, gradients, fonts — make it yours with our intuitive customization playground.',
+    accent: 'purple' as AccentColor,
   },
   {
     icon: Copy,
-    title: 'One-click copy + paste',
-    description: 'Generate your embed code instantly and deploy in seconds, not hours.',
+    title: 'One-Click Deploy',
+    description: 'Generate embed code faster than you can say "announcement". Deploy anywhere, anytime.',
+    accent: 'pink' as AccentColor,
   },
 ];
 
+const accentColors: Record<AccentColor, string> = {
+  yellow: 'from-yellow-400 to-yellow-600',
+  blue: 'from-blue-400 to-blue-600',
+  purple: 'from-purple-400 to-purple-600',
+  pink: 'from-pink-400 to-pink-600',
+};
+
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-padding bg-white">
+      <div className="container-xl">
         {/* Section header */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Everything you need to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              get started
-            </span>
+          <div className="inline-flex items-center px-6 py-3 bg-yellow-100 text-gray-900 rounded-full text-sm font-bold mb-8">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Everything you need (and nothing you don&apos;t)
+          </div>
+          
+          <h2 className="heading-lg text-gray-900 mb-6">
+            Features that make you go{' '}
+            <span className="gradient-text">&quot;wow&quot;</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            No technical skills required. Create, customize, and deploy announcement bars in minutes.
+          
+          <p className="body-lg text-gray-600 max-w-3xl mx-auto">
+            We&apos;ve obsessed over every detail so you don&apos;t have to. Powerful features wrapped in delightful simplicity.
           </p>
         </div>
 
@@ -45,21 +62,21 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-200"
+              className={`playful-card group stagger-${index + 1} fade-in`}
             >
               <div className="flex flex-col items-center text-center">
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-8 h-8 text-white" />
+                {/* Icon with dynamic gradient */}
+                <div className={`w-20 h-20 bg-gradient-to-br ${accentColors[feature.accent]} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                  <feature.icon className="w-10 h-10 text-white" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="heading-md text-gray-900 mb-4">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed font-medium">
                   {feature.description}
                 </p>
               </div>
@@ -67,14 +84,24 @@ export default function Features() {
           ))}
         </div>
 
-        {/* Additional CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="#pricing"
-            className="btn-primary inline-flex items-center"
-          >
-            Start building for free
-          </a>
+        {/* Playful stats section */}
+        <div className="mt-24 text-center">
+          <div className="playful-card yellow-accent max-w-2xl mx-auto p-12">
+            <h3 className="heading-md text-gray-900 mb-6">
+              💡 Fun Fact Alert!
+            </h3>
+            <p className="body-lg text-gray-700 mb-8">
+              Our users deploy <span className="font-black">27,000+</span> announcements every month.
+              That&apos;s roughly one every 96 seconds! 🚀
+            </p>
+            <a
+              href="#pricing"
+              className="btn-primary inline-flex items-center font-black uppercase tracking-wide"
+            >
+              Join the announcement party
+              <Sparkles className="ml-2 w-5 h-5" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const inter = Inter({
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-work-sans",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   <script src="https://announcmentbar.vercel.app/embed/kkmeyz.js" defer></script>
   </head>
       <body
-        className={`${inter.variable} font-sans antialiased`}
+        className={`${workSans.variable} font-sans antialiased`}
       >
         <Header />
         <main>

@@ -10,8 +10,8 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Announcement Bar - Add announcement bars to your site in seconds",
-  description: "Customizable. Embeddable. No coding needed. Create beautiful announcement bars for your website with our easy-to-use tool.",
+  title: "Yello.bar - Announce product updates, promos, or maintenance in seconds",
+  description: "Yello makes it stupidly easy to create and embed banners that actually get noticed. Templates, easy embedding, mobile-friendly.",
 };
 
 export default function RootLayout({
@@ -21,9 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-  <head>
-  <script src="https://announcmentbar.vercel.app/embed/kkmeyz.js" defer></script>
-  </head>
       <body
         className={`${workSans.variable} font-sans antialiased`}
       >

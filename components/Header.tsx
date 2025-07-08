@@ -17,9 +17,9 @@ export default function Header() {
               <Image
                 src="/logo.svg"
                 alt="Yello.bar"
-                width={120}
-                height={32}
-                className="h-8 w-auto"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
                 priority
               />
             </div>
@@ -38,9 +38,12 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <a href="#pricing" className="btn-primary">
+          {/* Auth buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a href="https://app.yello.bar/auth/login" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-700 hover:text-gray-900 transition-colors">
+              Log In
+            </a>
+            <a href="https://app.yello.bar/auth/signup" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Get started free ✨
             </a>
           </div>
@@ -81,8 +84,11 @@ export default function Header() {
               >
                 Pricing
               </a>
-              <div className="pt-4">
-                <a href="#pricing" className="btn-primary w-full text-center block">
+              <div className="pt-4 space-y-3">
+                <a href="https://app.yello.bar/auth/login" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-xl text-gray-700 hover:text-gray-900 hover:bg-yellow-50 font-bold text-center">
+                  Log In
+                </a>
+                <a href="https://app.yello.bar/auth/signup" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">
                   Get started free ✨
                 </a>
               </div>

@@ -40,13 +40,13 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 yellow-accent rounded-full text-gray-900 text-sm font-medium mb-8 wiggle-on-hover">
               <Sparkles className="w-4 h-4 mr-2" />
-              No account needed to start
+              Free forever, unlock more with Unlimited
             </div>
 
             {/* Main heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Announce product updates, promos, or{' '}
-              <span className="yellow-gradient-text">maintenance</span>{' '}
+              <span style={{ color: '#FF6B6B' }} className="font-bold">maintenance</span>{' '}
               in seconds.
             </h1>
 
@@ -58,7 +58,9 @@ export default function Hero() {
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
-                href="#pricing"
+                href="https://app.yello.bar/auth/signup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-lg px-8 py-4 inline-flex items-center group"
               >
                 Get started free

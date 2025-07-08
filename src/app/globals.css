@@ -71,9 +71,9 @@ html {
   animation: wiggle 0.5s ease-in-out;
 }
 
-/* Yellow gradient text */
-.yellow-gradient-text {
-  background: linear-gradient(135deg, #FFFFC5 0%, #FFFF99 50%, #FFF700 100%);
+/* Blue-purple gradient text - more readable than yellow */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #6366f1 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;

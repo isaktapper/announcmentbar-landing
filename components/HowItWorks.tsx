@@ -140,7 +140,9 @@ export default function HowItWorks() {
           </div>
           <div>
             <a
-              href="#pricing"
+              href="https://app.yello.bar/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center text-lg px-8 py-4"
             >
               Start creating now

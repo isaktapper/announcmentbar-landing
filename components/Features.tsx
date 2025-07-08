@@ -4,7 +4,7 @@ const features = [
   {
     icon: Layers,
     title: 'Templates for every use case',
-    description: 'Sales, announcements, maintenance, events — we&apos;ve got you covered with proven designs.',
+    description: 'Sales, announcements, maintenance, events – all covered with clean, effective designs.',
   },
   {
     icon: Code,
@@ -31,7 +31,7 @@ export default function Features() {
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Everything you need to{' '}
-            <span className="yellow-gradient-text">get noticed</span>
+            <span style={{ color: '#FF6B6B' }} className="font-bold">get noticed</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stop wasting time with complex tools. Yello gets your message live in seconds, not hours.
@@ -75,7 +75,9 @@ export default function Features() {
           </div>
           <div>
             <a
-              href="#pricing"
+              href="https://app.yello.bar/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center"
             >
               Start building for free ✨

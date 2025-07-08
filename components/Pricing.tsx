@@ -99,7 +99,10 @@ export default function Pricing() {
               </div>
 
               {/* CTA button */}
-              <button
+              <a
+                href="https://app.yello.bar/auth/signup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`w-full py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center justify-center ${
                   plan.popular
                     ? 'btn-primary hover:scale-105'
@@ -108,7 +111,7 @@ export default function Pricing() {
               >
                 {plan.popular && <Zap className="w-5 h-5 mr-2" />}
                 {plan.cta}
-              </button>
+              </a>
 
               {/* Additional note for Unlimited plan */}
               {plan.popular && plan.note && (
@@ -125,18 +128,9 @@ export default function Pricing() {
 
         {/* Additional info */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gray-50 rounded-2xl mb-6">
-            <span className="text-2xl mr-3">💡</span>
-            <span className="text-gray-700">
-              <span className="font-semibold">95% of users</span> upgrade to Unlimited within their first week
-            </span>
-          </div>
           <div className="space-y-2">
             <p className="text-gray-600">
               Questions? <a href="mailto:hello@yello.bar" className="text-yellow-600 hover:underline font-medium">We&apos;re here to help →</a>
-            </p>
-            <p className="text-sm text-gray-500">
-              ✅ 30-day money back guarantee • 🚀 Instant activation
             </p>
           </div>
         </div>

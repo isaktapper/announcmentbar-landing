@@ -34,6 +34,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <script src="https://app.yello.bar/embed/plo4ze.js" defer></script>
       </body>
     </html>
   );

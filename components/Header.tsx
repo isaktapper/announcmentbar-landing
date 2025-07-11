@@ -3,9 +3,25 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleSectionNavigation = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+    e.preventDefault();
+    if (pathname === '/') {
+      // If we're already on the home page, just scroll to the section
+      const element = document.getElementById(section);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If we're on another page, navigate to home page with the hash
+      window.location.href = `/#${section}`;
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
@@ -13,7 +29,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="wiggle-on-hover cursor-pointer">
+            <Link href="/" className="wiggle-on-hover cursor-pointer">
               <Image
                 src="/logo.svg"
                 alt="Yello.bar"
@@ -22,21 +38,38 @@ export default function Header() {
                 className="h-10 w-auto"
                 priority
               />
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
+            <a 
+              href="#features" 
+              className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow"
+              onClick={(e) => handleSectionNavigation(e, 'features')}
+            >
               Features
             </a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
+            <a 
+              href="#how-it-works" 
+              className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow"
+              onClick={(e) => handleSectionNavigation(e, 'how-it-works')}
+            >
               How it works
             </a>
-            <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
+            <a 
+              href="#pricing" 
+              className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow"
+              onClick={(e) => handleSectionNavigation(e, 'pricing')}
+            >
               Pricing
             </a>
-            <a href="https://yellobar.canny.io" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
+            <a 
+              href="https://yellobar.canny.io" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow"
+            >
               Feedback
             </a>
           </nav>
@@ -69,21 +102,21 @@ export default function Header() {
               <a
                 href="#features"
                 className="block px-3 py-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-yellow-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleSectionNavigation(e, 'features')}
               >
                 Features
               </a>
               <a
                 href="#how-it-works"
                 className="block px-3 py-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-yellow-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleSectionNavigation(e, 'how-it-works')}
               >
                 How it works
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-yellow-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleSectionNavigation(e, 'pricing')}
               >
                 Pricing
               </a>

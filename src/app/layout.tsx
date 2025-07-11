@@ -35,10 +35,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Script
-          src="https://app.yello.bar/embed/plo4ze.js"
-          strategy="afterInteractive"
-        />
+        <Script src="https://app.yello.bar/embed/plo4ze.js" defer></Script>
       </body>
     </html>
   );

@@ -3,6 +3,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Script from "next/script";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -34,7 +35,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <script src="https://app.yello.bar/embed/plo4ze.js" defer></script>
+        <Script
+          src="https://app.yello.bar/embed/plo4ze.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

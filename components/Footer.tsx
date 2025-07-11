@@ -1,4 +1,4 @@
-import { Github, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -30,15 +30,6 @@ export default function Footer() {
               About
             </a>
             <a
-              href="https://github.com/isaktapper"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <Github size={16} />
-              <span>GitHub</span>
-            </a>
-            <a
               href="/privacy"
               className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow"
             >
@@ -51,14 +42,9 @@ export default function Footer() {
             <span>Made with</span>
             <Heart className="w-4 h-4 mx-1 text-red-400" />
             <span>by</span>
-            <a
-              href="https://github.com/isaktapper"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 text-gray-700 hover:text-gray-900 font-medium transition-colors"
-            >
-              Isak Tapper
-            </a>
+            <span className="ml-1 text-gray-700 font-medium">
+              Isak
+            </span>
           </div>
         </div>
 

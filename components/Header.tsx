@@ -36,6 +36,9 @@ export default function Header() {
             <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
               Pricing
             </a>
+            <a href="https://yellobar.canny.io" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors hover:underline-yellow">
+              Feedback
+            </a>
           </nav>
 
           {/* Auth buttons */}
@@ -83,6 +86,15 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
+              </a>
+              <a
+                href="https://yellobar.canny.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-yellow-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Feedback
               </a>
               <div className="pt-4 space-y-3">
                 <a href="https://app.yello.bar/auth/login" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-xl text-gray-700 hover:text-gray-900 hover:bg-yellow-50 font-bold text-center">

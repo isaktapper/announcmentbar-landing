@@ -34,7 +34,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <script src="https://app.yello.bar/embed/xledqb.js" defer></script>
+        <script src="https://app.yello.bar/embed/fut7ep.js" defer></script>
       </body>
     </html>
   );

@@ -18,19 +18,6 @@ export default function Hero() {
         <div className="absolute bottom-40 left-1/3 text-yellow-400 opacity-40">
           <Zap className="w-5 h-5 float-animation" style={{ animationDelay: '0.5s' }} />
         </div>
-
-        {/* Subtle scribble in corner */}
-        <div className="absolute bottom-20 right-10 w-24 h-24 text-yellow-200 opacity-30">
-          <svg viewBox="0 0 100 100" className="w-full h-full float-animation">
-            <path 
-              d="M20,80 Q30,20 50,60 Q70,10 80,50 Q90,80 70,70 Q50,90 30,70 Q10,60 20,80" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="3" 
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,6 +41,13 @@ export default function Hero() {
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-lg leading-relaxed">
               Yello makes it <span className="underline-yellow font-medium">stupidly easy</span> to create and embed bars that actually get noticed.
             </p>
+
+            {/* Product Hunt Badge */}
+            <div className="mb-8">
+              <a href="https://www.producthunt.com/products/yello?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-yello" target="_blank" rel="noopener noreferrer">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=990932&theme=light&t=1752503912115" alt="Yello - Banners for your site. Instantly. | Product Hunt" style={{ width: '180px', height: '39px' }} width="180" height="39" />
+              </a>
+            </div>
 
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4 items-start">

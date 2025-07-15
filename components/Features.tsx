@@ -1,25 +1,34 @@
-import { Code, Smartphone, Layers, Zap } from 'lucide-react';
+import React from 'react';
+import Image from 'next/image';
 
 const features = [
   {
-    icon: Layers,
-    title: 'Templates for every use case',
-    description: 'Sales, bars, maintenance, events – all covered with clean, effective designs.',
-  },
-  {
-    icon: Code,
+    icon: (
+      <Image src="/toggle.png" alt="Embed icon" width={64} height={64} priority />
+    ),
     title: 'Embed with 1 line of code',
-    description: 'Copy, paste, done. Works with any website, CMS, or platform. No developer needed.',
+    description: 'Copy, paste, done. Add your bar to any website in seconds — no developer needed.',
   },
   {
-    icon: Smartphone,
-    title: 'Mobile-friendly out of the box',
-    description: 'Looks perfect on every device. Responsive design that adapts to any screen size.',
+    icon: (
+      <Image src="/flash.png" alt="Go live icon" width={64} height={64} priority />
+    ),
+    title: 'Go live in under 2 minutes',
+    description: 'From idea to announcement in 120 seconds. Most bars are published instantly.',
   },
   {
-    icon: Zap,
-    title: 'No account needed (optional)',
-    description: 'Start creating immediately. Sign up later if you want to save and manage multiple bars.',
+    icon: (
+      <Image src="/paint.png" alt="Customize icon" width={64} height={64} priority />
+    ),
+    title: 'Customize every detail',
+    description: 'Fonts, colors, visibility, and behavior — tailor your bar without writing a single line of code.',
+  },
+  {
+    icon: (
+      <Image src="/calendar.png" alt="Set it and forget it icon" width={64} height={64} priority />
+    ),
+    title: 'Set it and forget it',
+    description: 'Schedule your bars, target by country or path, and let Yello handle the rest.',
   },
 ];
 
@@ -43,13 +52,12 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-extra-friendly hover:shadow-xl transition-all duration-300 border border-gray-100 card-hover"
+              className="group bg-white p-8 rounded-extra-friendly hover:shadow-2xl shadow-lg transition-all duration-300 border border-gray-100 card-hover transform hover:-translate-y-2 hover:scale-105"
+              style={{ boxShadow: '0 4px 24px 0 rgba(255, 184, 0, 0.10)' }}
             >
               <div className="flex flex-col items-center text-center">
                 {/* Icon */}
-                <div className="w-16 h-16 yellow-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 wiggle-on-hover">
-                  <feature.icon className="w-8 h-8 text-gray-900" />
-                </div>
+                <Image src={feature.icon.props.src} alt={feature.icon.props.alt} width={64} height={64} priority />
 
                 {/* Title */}
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">

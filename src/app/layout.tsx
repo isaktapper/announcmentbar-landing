@@ -34,7 +34,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <script src="https://app.yello.bar/embed/sh0tu3.js" defer></script>
+        <script src="http://localhost:3000/embed/ceglrd.js" defer></script>
       </body>
     </html>
   );

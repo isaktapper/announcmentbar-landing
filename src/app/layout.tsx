@@ -10,7 +10,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Yello.bar - Announce product updates, promos, or maintenance in seconds",
+  title: "Yello - Announce product updates, promos, or maintenance in seconds",
   description: "Yello makes it stupidly easy to create and embed bars that actually get noticed. Templates, easy embedding, mobile-friendly.",
   icons: {
     icon: "/favicon_final_2.png",

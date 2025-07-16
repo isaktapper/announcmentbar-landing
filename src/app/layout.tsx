@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: "Yello.bar - Announce product updates, promos, or maintenance in seconds",
   description: "Yello makes it stupidly easy to create and embed bars that actually get noticed. Templates, easy embedding, mobile-friendly.",
   icons: {
-    icon: "/favicon_yello.png",
-    shortcut: "/favicon_yello.png",
-    apple: "/favicon_yello.png",
+    icon: "/favicon_final_2.png",
+    shortcut: "/favicon_final_2.png",
+    apple: "/favicon_final_2.png",
   },
 };
 
